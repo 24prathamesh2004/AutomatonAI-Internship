@@ -1,6 +1,6 @@
-## 🧠 Computer Vision
+### 🧠 Computer Vision
 
-### 📌 Filters (Kernels)
+## 📌 Filters (Kernels)
 Filters are small matrices applied to images to modify pixel values.
 
 Common filters:
@@ -8,7 +8,7 @@ Common filters:
 - **Sharpen** – Enhance edges
 - **Edge Detection** – Detect object boundaries
 
-### 📌 Convolution
+## 📌 Convolution
 Convolution is the process of:
 1. Sliding a filter over an image
 2. Performing element-wise multiplication
@@ -20,14 +20,14 @@ This operation helps the model **learn visual patterns** such as edges and shape
 Example kernel:
 ![Convolution Demo](https://substackcdn.com/image/fetch/$s_!Ewv-!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fef060a1b-612c-4ca8-bcd5-215d46c133a2_1095x447.gif)
 
-## 🛡️ Preventing Overfitting in Deep Neural Networks
+### 🛡️ Preventing Overfitting in Deep Neural Networks
 
 Overfitting occurs when a model performs well on training data but fails to generalize to unseen data.  
 The following techniques are commonly used to improve **generalization** in deep neural networks.
 
 ---
 
-### 📌 Regularization
+## 📌 Regularization
 Regularization adds a penalty to large weights in the loss function to reduce model complexity.
 
 Types:
@@ -38,7 +38,7 @@ Types:
 
 ---
 
-### 📌 Dropout
+## 📌 Dropout
 Dropout randomly deactivates a fraction of neurons during training.
 
 - Prevents neurons from co-adapting
@@ -48,7 +48,7 @@ Dropout randomly deactivates a fraction of neurons during training.
 
 ---
 
-### 📌 Early Stopping
+## 📌 Early Stopping
 Early stopping monitors validation performance and stops training when it starts to degrade.
 
 - Prevents unnecessary training
@@ -58,7 +58,7 @@ Early stopping monitors validation performance and stops training when it starts
 
 ---
 
-### 📌 Batch Normalization
+## 📌 Batch Normalization
 Batch Normalization normalizes layer inputs during training.
 
 - Stabilizes learning
@@ -67,14 +67,14 @@ Batch Normalization normalizes layer inputs during training.
 
 **Result:** Faster convergence and improved generalization.
 
-## 🔄 Transfer Learning
+### 🔄 Transfer Learning
 
 Transfer learning leverages knowledge from a **pretrained deep neural network** to solve a new but related task.  
 It significantly reduces training time and improves performance, especially with limited data.
 
 ---
 
-### 📌 Pretrained Embeddings
+## 📌 Pretrained Embeddings
 A pretrained model learns rich feature representations from large datasets like **ImageNet**.
 
 - Early layers capture edges, textures, and shapes
@@ -84,7 +84,7 @@ These learned features are reused as **embeddings** for new tasks.
 
 ---
 
-### 📌 Fine-Tuning
+## 📌 Fine-Tuning
 Fine-tuning involves updating some or all layers of a pretrained model on the target dataset.
 
 - Freeze early layers
@@ -95,7 +95,7 @@ Fine-tuning involves updating some or all layers of a pretrained model on the ta
 
 ---
 
-### 📌 Differential Learning Rates
+## 📌 Differential Learning Rates
 Different learning rates are applied to different layers of the network.
 
 - Lower learning rate → pretrained layers
@@ -120,13 +120,13 @@ ImageNet is a large-scale dataset commonly used for pretraining deep learning mo
 
 ---
 
-## 🧠 AlexNet
+### 🧠 AlexNet
 
 AlexNet is a landmark **deep convolutional neural network (CNN)** that revolutionized computer vision by demonstrating the power of deep learning on large-scale image classification tasks.
 
 ---
 
-### 🏆 ImageNet Achievement
+## 🏆 ImageNet Achievement
 - **Competition:** ImageNet Large Scale Visual Recognition Challenge (ILSVRC)
 - **Year:** 2012
 - **Result:** 🥇 **1st Place Winner**
@@ -134,14 +134,14 @@ AlexNet is a landmark **deep convolutional neural network (CNN)** that revolutio
 
 ---
 
-### 🎯 Purpose
+## 🎯 Purpose
 - Large-scale **image classification**
 - Learning hierarchical visual features from raw pixel data
 - Proved deep CNNs outperform handcrafted features
 
 ---
 
-### 💡 Core Ideas
+## 💡 Core Ideas
 - Deep CNN architecture
 - Use of **ReLU** activation for faster training
 - **Dropout** to reduce overfitting
@@ -150,7 +150,7 @@ AlexNet is a landmark **deep convolutional neural network (CNN)** that revolutio
 
 ---
 
-### 🏗️ Architecture Overview
+## 🏗️ Architecture Overview
 AlexNet consists of **8 learnable layers**:
 - **5 Convolutional layers**
 - **3 Fully Connected layers**
@@ -159,7 +159,7 @@ AlexNet consists of **8 learnable layers**:
 
 ---
 
-### 🔢 Model Details
+## 🔢 Model Details
 
 | Property | Value |
 |--------|------|
@@ -173,19 +173,19 @@ AlexNet consists of **8 learnable layers**:
 
 ---
 
-### 🚀 Why AlexNet Matters
+## 🚀 Why AlexNet Matters
 - Sparked the deep learning boom in computer vision
 - Set the foundation for models like VGG, GoogLeNet, and ResNet
 - Still used as a reference architecture in CNN studies
 
 ---
-## 🧠 VGG (VGG-16 / VGG-19)
+### 🧠 VGG (VGG-16 / VGG-19)
 
 VGG is a deep convolutional neural network known for its **simple and uniform architecture**, using small convolution filters stacked deeply to achieve high performance in image recognition tasks.
 
 ---
 
-### 🏆 ImageNet Achievement
+## 🏆 ImageNet Achievement
 - **Competition:** ImageNet Large Scale Visual Recognition Challenge (ILSVRC)
 - **Year:** 2014
 - **Result:** 🥈 **2nd Place (Classification)**
@@ -193,14 +193,14 @@ VGG is a deep convolutional neural network known for its **simple and uniform ar
 
 ---
 
-### 🎯 Purpose
+## 🎯 Purpose
 - Large-scale **image classification**
 - Learning deep hierarchical visual features
 - Serving as a strong **feature extractor** for transfer learning
 
 ---
 
-### 💡 Core Ideas
+## 💡 Core Ideas
 - Use of **very small (3×3) convolution filters**
 - Deep stacking of convolution layers
 - Uniform architecture across the network
@@ -208,7 +208,7 @@ VGG is a deep convolutional neural network known for its **simple and uniform ar
 
 ---
 
-### 🏗️ Architecture Overview
+## 🏗️ Architecture Overview
 Two popular variants:
 - **VGG-16** → 16 learnable layers
 - **VGG-19** → 19 learnable layers
@@ -217,7 +217,7 @@ Two popular variants:
 
 ---
 
-### 🔢 Model Details
+## 🔢 Model Details
 
 | Property | VGG-16 | VGG-19 |
 |--------|--------|--------|
@@ -231,7 +231,7 @@ Two popular variants:
 
 ---
 
-### 🚀 Why VGG Matters
+## 🚀 Why VGG Matters
 - Demonstrated the power of **network depth**
 - Simple, easy-to-understand CNN design
 - Widely used in **transfer learning** and feature extraction
@@ -239,13 +239,13 @@ Two popular variants:
 
 ---
 
-## 🧠 GoogLeNet (Inception v1)
+### 🧠 GoogLeNet (Inception v1)
 
 GoogLeNet introduced the **Inception architecture**, enabling very deep networks while keeping computational cost low by using parallel convolution paths.
 
 ---
 
-### 🏆 ImageNet Achievement
+## 🏆 ImageNet Achievement
 - **Competition:** ImageNet Large Scale Visual Recognition Challenge (ILSVRC)
 - **Year:** 2014
 - **Result:** 🥇 **1st Place Winner**
@@ -253,14 +253,14 @@ GoogLeNet introduced the **Inception architecture**, enabling very deep networks
 
 ---
 
-### 🎯 Purpose
+## 🎯 Purpose
 - Large-scale **image classification**
 - Efficient deep feature extraction
 - Reduce computation without sacrificing accuracy
 
 ---
 
-### 💡 Core Ideas
+## 💡 Core Ideas
 - **Inception modules** with parallel filters (1×1, 3×3, 5×5)
 - **1×1 convolutions** for dimensionality reduction
 - Deep architecture with controlled parameter growth
@@ -268,14 +268,14 @@ GoogLeNet introduced the **Inception architecture**, enabling very deep networks
 
 ---
 
-### 🏗️ Architecture Overview
+## 🏗️ Architecture Overview
 GoogLeNet is composed of stacked **Inception modules** arranged in a deep network.
 
 ![GoogLeNet Architecture](images/googlenet.png)
 
 ---
 
-### 🔢 Model Details
+## 🔢 Model Details
 
 | Property | Value |
 |--------|------|
@@ -289,7 +289,7 @@ GoogLeNet is composed of stacked **Inception modules** arranged in a deep networ
 
 ---
 
-### 🚀 Why GoogLeNet Matters
+## 🚀 Why GoogLeNet Matters
 - Much **lighter** than VGG with comparable or better accuracy
 - Introduced modular CNN design
 - Inspired later architectures like Inception-v3, v4, and Xception
@@ -297,13 +297,13 @@ GoogLeNet is composed of stacked **Inception modules** arranged in a deep networ
 
 ---
 
-## 🧠 SqueezeNet
+### 🧠 SqueezeNet
 
 SqueezeNet is a lightweight convolutional neural network designed to achieve **AlexNet-level accuracy with dramatically fewer parameters**, making it suitable for deployment on resource-constrained devices.
 
 ---
 
-### 🏆 ImageNet Achievement
+## 🏆 ImageNet Achievement
 - **Competition:** ImageNet Large Scale Visual Recognition Challenge (ILSVRC)
 - **Year:** 2016
 - **Result:** ❌ Did NOT win ImageNet
@@ -311,14 +311,14 @@ SqueezeNet is a lightweight convolutional neural network designed to achieve **A
 
 ---
 
-### 🎯 Purpose
+## 🎯 Purpose
 - Efficient **image classification**
 - Model compression and deployment
 - Suitable for **embedded systems** and edge devices
 
 ---
 
-### 💡 Core Ideas
+## 💡 Core Ideas
 - **Fire modules** instead of traditional convolution blocks
 - Use of **1×1 convolutions** to reduce parameters
 - Delayed downsampling to preserve spatial information
@@ -326,7 +326,7 @@ SqueezeNet is a lightweight convolutional neural network designed to achieve **A
 
 ---
 
-### 🏗️ Architecture Overview
+## 🏗️ Architecture Overview
 SqueezeNet is built using **Fire modules**, each consisting of:
 - **Squeeze layer:** 1×1 convolutions
 - **Expand layer:** 1×1 and 3×3 convolutions
@@ -336,7 +336,7 @@ SqueezeNet is built using **Fire modules**, each consisting of:
 
 ---
 
-### 🔢 Model Details
+## 🔢 Model Details
 
 | Property | Value |
 |--------|------|
@@ -350,7 +350,7 @@ SqueezeNet is built using **Fire modules**, each consisting of:
 
 ---
 
-### 🚀 Why SqueezeNet Matters
+## 🚀 Why SqueezeNet Matters
 - Extremely **parameter-efficient**
 - Faster training and inference
 - Ideal for low-memory environments
@@ -358,13 +358,13 @@ SqueezeNet is built using **Fire modules**, each consisting of:
 
 ---
 
-## 🧠 ResNet (Residual Network)
+### 🧠 ResNet (Residual Network)
 
 ResNet introduced **residual learning**, enabling the training of extremely deep neural networks by solving the vanishing gradient problem.
 
 ---
 
-### 🏆 ImageNet Achievement
+## 🏆 ImageNet Achievement
 - **Competition:** ImageNet Large Scale Visual Recognition Challenge (ILSVRC)
 - **Year:** 2015
 - **Result:** 🥇 **1st Place Winner**
@@ -372,14 +372,14 @@ ResNet introduced **residual learning**, enabling the training of extremely deep
 
 ---
 
-### 🎯 Purpose
+## 🎯 Purpose
 - Large-scale **image classification**
 - Training very deep CNNs effectively
 - Learning robust hierarchical visual features
 
 ---
 
-### 💡 Core Ideas
+## 💡 Core Ideas
 - **Residual (skip) connections**
 - Learning residual mappings instead of direct mappings
 - Easier gradient flow in deep networks
@@ -387,7 +387,7 @@ ResNet introduced **residual learning**, enabling the training of extremely deep
 
 ---
 
-### 🏗️ Architecture Overview
+## 🏗️ Architecture Overview
 ResNet uses **residual blocks** with identity shortcut connections.
 
 ![ResNet ](images/res2.png)
@@ -396,7 +396,7 @@ ResNet uses **residual blocks** with identity shortcut connections.
 
 ---
 
-### 🔢 Model Details
+## 🔢 Model Details
 
 | Property | ResNet-50 | ResNet-101 | ResNet-152 |
 |--------|----------|------------|------------|
@@ -409,7 +409,7 @@ ResNet uses **residual blocks** with identity shortcut connections.
 
 ---
 
-### 🚀 Why ResNet Matters
+## 🚀 Why ResNet Matters
 - Solved the **vanishing gradient** problem
 - Enabled ultra-deep CNNs
 - Backbone for many modern CV models
@@ -417,13 +417,13 @@ ResNet uses **residual blocks** with identity shortcut connections.
 
 ---
 
-## 🧠 MobileNet
+### 🧠 MobileNet
 
 MobileNet is a lightweight convolutional neural network designed for **mobile and embedded vision applications**, focusing on low latency and high efficiency.
 
 ---
 
-### 🏆 ImageNet Achievement
+## 🏆 ImageNet Achievement
 - **Competition:** ImageNet Large Scale Visual Recognition Challenge (ILSVRC)
 - **Year:** 2017
 - **Result:** ❌ Did NOT win ImageNet
@@ -431,14 +431,14 @@ MobileNet is a lightweight convolutional neural network designed for **mobile an
 
 ---
 
-### 🎯 Purpose
+## 🎯 Purpose
 - Efficient **image classification**
 - Deployment on **mobile and edge devices**
 - Real-time computer vision applications
 
 ---
 
-### 💡 Core Ideas
+## 💡 Core Ideas
 - **Depthwise separable convolutions**
 - Factorization of standard convolution into:
   - Depthwise convolution
@@ -447,7 +447,7 @@ MobileNet is a lightweight convolutional neural network designed for **mobile an
 
 ---
 
-### 🏗️ Architecture Overview
+## 🏗️ Architecture Overview
 MobileNet replaces standard convolutions with **depthwise separable convolutions**.
 
 ![MobileNet module](images/mobile.png)
@@ -455,7 +455,7 @@ MobileNet replaces standard convolutions with **depthwise separable convolutions
 
 ---
 
-### 🔢 Model Details (MobileNet v1)
+## 🔢 Model Details (MobileNet v1)
 
 | Property | Value |
 |--------|------|
@@ -469,7 +469,7 @@ MobileNet replaces standard convolutions with **depthwise separable convolutions
 
 ---
 
-### 🚀 Why MobileNet Matters
+## 🚀 Why MobileNet Matters
 - Optimized for **speed and efficiency**
 - Ideal for resource-constrained hardware
 - Widely used in mobile AI applications
