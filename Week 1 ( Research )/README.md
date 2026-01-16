@@ -108,7 +108,7 @@ This prevents destroying learned representations while still enabling adaptation
 ## 🖼️ Pretraining Dataset – ImageNet
 ImageNet is a large-scale dataset commonly used for pretraining deep learning models.
 
-![ImageNet Dataset Overview](https://upload.wikimedia.org/wikipedia/commons/7/7e/ImageNet_large_scale_visual_recognition_challenge.png)
+![ImageNet Dataset Overview](images/imagenetT.png)
 
 ---
 
@@ -155,7 +155,7 @@ AlexNet consists of **8 learnable layers**:
 - **5 Convolutional layers**
 - **3 Fully Connected layers**
 
-![AlexNet Architecture](https://upload.wikimedia.org/wikipedia/commons/c/cc/AlexNet-architecture.png)
+![AlexNet Architecture](images/alexnet.png)
 
 ---
 
@@ -213,7 +213,7 @@ Two popular variants:
 - **VGG-16** → 16 learnable layers
 - **VGG-19** → 19 learnable layers
 
-![VGG Architecture](https://upload.wikimedia.org/wikipedia/commons/2/2c/VGG-16_architecture.png)
+![VGG Architecture](images/vgg.png)
 
 ---
 
@@ -271,7 +271,7 @@ GoogLeNet introduced the **Inception architecture**, enabling very deep networks
 ### 🏗️ Architecture Overview
 GoogLeNet is composed of stacked **Inception modules** arranged in a deep network.
 
-![GoogLeNet Architecture](https://upload.wikimedia.org/wikipedia/commons/4/4f/Inception_module.png)
+![GoogLeNet Architecture](images/googlenet.png)
 
 ---
 
@@ -331,7 +331,8 @@ SqueezeNet is built using **Fire modules**, each consisting of:
 - **Squeeze layer:** 1×1 convolutions
 - **Expand layer:** 1×1 and 3×3 convolutions
 
-![SqueezeNet Architecture](https://upload.wikimedia.org/wikipedia/commons/8/8e/SqueezeNet_Fire_Module.png)
+![SqueezeNet Fire module](images/squeeze-fire.png)
+![SqueezeNet Architecture](images/squeeze.png)
 
 ---
 
@@ -389,7 +390,9 @@ ResNet introduced **residual learning**, enabling the training of extremely deep
 ### 🏗️ Architecture Overview
 ResNet uses **residual blocks** with identity shortcut connections.
 
-![ResNet Architecture](https://upload.wikimedia.org/wikipedia/commons/6/6f/Residual_block.png)
+![ResNet ](images/res2.png)
+![ResNet ](images/res1.png)
+![ResNet Architecture](images/resnet.png)
 
 ---
 
@@ -447,7 +450,8 @@ MobileNet is a lightweight convolutional neural network designed for **mobile an
 ### 🏗️ Architecture Overview
 MobileNet replaces standard convolutions with **depthwise separable convolutions**.
 
-![MobileNet Architecture](https://upload.wikimedia.org/wikipedia/commons/3/3f/Depthwise_separable_convolution.png)
+![MobileNet module](images/mobile.png)
+![MobileNet Architecture](images/mobilenet.png)
 
 ---
 
