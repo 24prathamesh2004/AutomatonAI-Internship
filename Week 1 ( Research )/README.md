@@ -1,6 +1,6 @@
-### 🧠 Computer Vision
+# 🧠 Computer Vision
 
-## 📌 Filters (Kernels)
+### 📌 Filters (Kernels)
 Filters are small matrices applied to images to modify pixel values.
 
 Common filters:
@@ -8,7 +8,7 @@ Common filters:
 - **Sharpen** – Enhance edges
 - **Edge Detection** – Detect object boundaries
 
-## 📌 Convolution
+### 📌 Convolution
 Convolution is the process of:
 1. Sliding a filter over an image
 2. Performing element-wise multiplication
@@ -20,14 +20,14 @@ This operation helps the model **learn visual patterns** such as edges and shape
 Example kernel:
 ![Convolution Demo](https://substackcdn.com/image/fetch/$s_!Ewv-!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fef060a1b-612c-4ca8-bcd5-215d46c133a2_1095x447.gif)
 
-### 🛡️ Preventing Overfitting in Deep Neural Networks
+## 🛡️ Preventing Overfitting in Deep Neural Networks
 
 Overfitting occurs when a model performs well on training data but fails to generalize to unseen data.  
 The following techniques are commonly used to improve **generalization** in deep neural networks.
 
 ---
 
-## 📌 Regularization
+### 📌 Regularization
 Regularization adds a penalty to large weights in the loss function to reduce model complexity.
 
 Types:
@@ -38,7 +38,7 @@ Types:
 
 ---
 
-## 📌 Dropout
+### 📌 Dropout
 Dropout randomly deactivates a fraction of neurons during training.
 
 - Prevents neurons from co-adapting
@@ -48,7 +48,7 @@ Dropout randomly deactivates a fraction of neurons during training.
 
 ---
 
-## 📌 Early Stopping
+### 📌 Early Stopping
 Early stopping monitors validation performance and stops training when it starts to degrade.
 
 - Prevents unnecessary training
@@ -58,7 +58,7 @@ Early stopping monitors validation performance and stops training when it starts
 
 ---
 
-## 📌 Batch Normalization
+### 📌 Batch Normalization
 Batch Normalization normalizes layer inputs during training.
 
 - Stabilizes learning
@@ -67,7 +67,7 @@ Batch Normalization normalizes layer inputs during training.
 
 **Result:** Faster convergence and improved generalization.
 
-### 🔄 Transfer Learning
+# 🔄 Transfer Learning
 
 Transfer learning leverages knowledge from a **pretrained deep neural network** to solve a new but related task.  
 It significantly reduces training time and improves performance, especially with limited data.
@@ -120,7 +120,7 @@ ImageNet is a large-scale dataset commonly used for pretraining deep learning mo
 
 ---
 
-### 🧠 AlexNet
+# 🧠 AlexNet
 
 AlexNet is a landmark **deep convolutional neural network (CNN)** that revolutionized computer vision by demonstrating the power of deep learning on large-scale image classification tasks.
 
@@ -179,7 +179,7 @@ AlexNet consists of **8 learnable layers**:
 - Still used as a reference architecture in CNN studies
 
 ---
-### 🧠 VGG (VGG-16 / VGG-19)
+# 🧠 VGG (VGG-16 / VGG-19)
 
 VGG is a deep convolutional neural network known for its **simple and uniform architecture**, using small convolution filters stacked deeply to achieve high performance in image recognition tasks.
 
@@ -239,7 +239,7 @@ Two popular variants:
 
 ---
 
-### 🧠 GoogLeNet (Inception v1)
+# 🧠 GoogLeNet (Inception v1)
 
 GoogLeNet introduced the **Inception architecture**, enabling very deep networks while keeping computational cost low by using parallel convolution paths.
 
@@ -297,7 +297,7 @@ GoogLeNet is composed of stacked **Inception modules** arranged in a deep networ
 
 ---
 
-### 🧠 SqueezeNet
+# 🧠 SqueezeNet
 
 SqueezeNet is a lightweight convolutional neural network designed to achieve **AlexNet-level accuracy with dramatically fewer parameters**, making it suitable for deployment on resource-constrained devices.
 
@@ -358,7 +358,7 @@ SqueezeNet is built using **Fire modules**, each consisting of:
 
 ---
 
-### 🧠 ResNet (Residual Network)
+# 🧠 ResNet (Residual Network)
 
 ResNet introduced **residual learning**, enabling the training of extremely deep neural networks by solving the vanishing gradient problem.
 
@@ -417,7 +417,7 @@ ResNet uses **residual blocks** with identity shortcut connections.
 
 ---
 
-### 🧠 MobileNet
+# 🧠 MobileNet
 
 MobileNet is a lightweight convolutional neural network designed for **mobile and embedded vision applications**, focusing on low latency and high efficiency.
 
