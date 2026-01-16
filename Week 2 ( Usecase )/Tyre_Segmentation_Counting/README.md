@@ -120,9 +120,13 @@ Tuned parameters:
 
 ## 🖼 Image Output Examples
 
-![Segmentation + Count](outputs/2.jpg)
+![Segmentation + Count](outputs/2.png)
 
 ![Segmentation + Count](outputs/1.jpg)
+
+## 🎥 Video Output Demo
+
+[![Tyre Video Demo](outputs/4.png)](outputs/3.mp4)
 
 
   
