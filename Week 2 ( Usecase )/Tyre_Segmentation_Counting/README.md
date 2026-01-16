@@ -120,11 +120,12 @@ Tuned parameters:
 
 ## 🖼 Output Examples
 
-### 🖼 Image Output
-- Green bounding boxes
-- Segmentation masks
-- Confidence labels
-- Tyre count overlay
+## 🖼 Image Output Examples
+
+![Tyre Segmentation Output](outputs/1.jpg)
+
+![Tyre Count Result](outputs/2.jpg)
+
 
   
 
