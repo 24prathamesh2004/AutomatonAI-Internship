@@ -126,7 +126,8 @@ Tuned parameters:
 
 ## 🎥 Video Output Demo
 
-[![Tyre Video Demo](outputs/4.png)](outputs/3.mp4)
+▶️ [Play Video Demo](outputs/videos/tyre_demo.mp4)
+
 
 
   
