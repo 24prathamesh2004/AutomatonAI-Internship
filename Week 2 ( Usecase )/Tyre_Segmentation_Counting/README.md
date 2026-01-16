@@ -1,3 +1,6 @@
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://tyre-seg-and-count-frontend.onrender.com)
+
+
 # 🚗 Tyre Segmentation & Counting Web Application
 
 A full-stack **Computer Vision Web Application** that performs **tyre segmentation and counting** using a custom-trained **YOLOv8 Segmentation model**, deployed with a **FastAPI backend** and a modern **frontend UI**.  
@@ -20,8 +23,6 @@ It is useful for:
 - Confidence scores for each detection
 - Image & video processing
 - CPU-compatible inference
-- REST API based backend
-- Deployable on free hosting platforms
 
 ---
 
@@ -40,28 +41,27 @@ It is useful for:
 - CORS Middleware
 
 ### 🎨 Frontend
-- HTML
-- CSS
-- JavaScript
-- Fetch API
+- React + tailwind CSS
 
 ### 🚀 Deployment
 - Backend: Render (Microservice)
-- Frontend: Render Static Site / Netlify / Vercel
+- Frontend: Vercel
 
 ---
 
 ## 📊 Dataset Preparation
 
 ### 📁 Dataset Collection
-- Images collected from:
-  - Public datasets
+- Images collected from google:
+  - Public datasets(only single tyer datasets are available which was failing for multitire images)
   - Internet sources
   - Real-world traffic scenes
+  - Garages
+  - Tire Manufacturing Lines
 - Focused on **clear tyre visibility**
 
 ### 🏷 Annotation
-- Tool used: **Roboflow / CVAT / LabelMe**
+- Tool used: **Roboflow**
 - Annotation format: **YOLOv8 Segmentation**
 - Each tyre annotated with:
   - Polygon mask
@@ -101,9 +101,9 @@ These augmentations help the model handle:
 ### 🏋️ Training Configuration
 | Parameter | Value |
 |---------|------|
-| Epochs | 100 |
-| Image Size | 640 |
-| Batch Size | 8 |
+| Epochs | 120 |
+| Image Size | 960 |
+| Batch Size | 16 |
 | Optimizer | AdamW |
 | Confidence Threshold | 0.25 |
 
