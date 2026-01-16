@@ -1,4 +1,4 @@
-## 🧠 Key Concepts
+## 🧠 Computer Vision
 
 ### 📌 Filters (Kernels)
 Filters are small matrices applied to images to modify pixel values.
