@@ -118,13 +118,11 @@ Tuned parameters:
 - Confidence threshold
 - IoU threshold
 
-## 🖼 Output Examples
-
 ## 🖼 Image Output Examples
 
-![Tyre Segmentation Output](outputs/1.jpg)
+![Segmentation + Count](outputs/2.jpg)
 
-![Tyre Count Result](outputs/2.jpg)
+![Segmentation + Count](outputs/1.jpg)
 
 
   
