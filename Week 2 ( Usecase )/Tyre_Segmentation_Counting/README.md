@@ -1,4 +1,4 @@
-[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://tyre-seg-and-count-frontend.onrender.com)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://tyre-seg-and-count-frontend.vercel.com)
 
 
 # 🚗 Tyre Segmentation & Counting Web Application
