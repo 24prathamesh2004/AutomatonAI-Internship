@@ -101,11 +101,11 @@ These augmentations help the model handle:
 ### 🏋️ Training Configuration
 | Parameter | Value |
 |---------|------|
-| Epochs | 120 |
-| Image Size | 960 |
+| Epochs | 80 |
+| Image Size | 768 |
 | Batch Size | 16 |
 | Optimizer | AdamW |
-| Confidence Threshold | 0.25 |
+| lr | 0.001 |
 
 ---
 
