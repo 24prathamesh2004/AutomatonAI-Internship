@@ -28,8 +28,6 @@ import face_logic as fl
 # Default recognition threshold
 DEFAULT_THRESHOLD = 0.38
 
-# --- Caching Resources ---
-
 @st.cache_resource
 def get_db_connection():
     """Initializes and caches the MongoDB connection."""
@@ -44,7 +42,6 @@ def load_arcface():
     return fl.get_arcface_model()
 
 def load_embeddings_cache(db_conn):
-    """Load enrollments into session state, passing the cached db connection."""
     if "embeddings_cache" in st.session_state and st.session_state.embeddings_cache is not None:
         return st.session_state.embeddings_cache
     try:
@@ -62,12 +59,10 @@ def load_embeddings_cache(db_conn):
         st.error(f"Could not load enrollments: {e}")
         return (np.zeros((0, 512), dtype=np.float32), [])
 
-# --- Pages ---
-
+# Pages 
 def enrollment_page():
     st.subheader("Multi-Pose Enrollment")
     
-    # Initialize session state for multi-step enrollment
     if "enroll_step" not in st.session_state:
         st.session_state.enroll_step = 0
         st.session_state.temp_embeddings = []
@@ -93,7 +88,6 @@ def enrollment_page():
             try:
                 detector = load_detector()
                 arcface = load_arcface()
-                
                 # Image processing
                 bytes_data = photo.getvalue()
                 nparr = np.frombuffer(bytes_data, np.uint8)
@@ -107,7 +101,7 @@ def enrollment_page():
                     if embedding is not None:
                         st.session_state.temp_embeddings.append(embedding.tolist())
                         st.session_state.enroll_step += 1
-                        st.rerun()  # Move to next step
+                        st.rerun()  
             except Exception as e:
                 st.error(f"Error: {e}")
 
@@ -122,14 +116,11 @@ def enrollment_page():
                 db=db_conn
             )
             st.success(f"Successfully enrolled **{user_name}** with 3 poses.")
-            
             # Reset state for next user
             st.session_state.enroll_step = 0
             st.session_state.temp_embeddings = []
             if "embeddings_cache" in st.session_state:
                 del st.session_state.embeddings_cache
-
-
 
 def live_attendance_page():
     st.subheader("Live Attendance (Photo Capture)")
@@ -170,15 +161,14 @@ def live_attendance_page():
                     if user_id != "Unknown":
                         # Mark Attendance
                         success = db.insert_attendance(user_id, db=db_conn)
-                        
                         # Fetch the name for display
                         user_info = db.get_enrollment_by_user_id(user_id, db=db_conn)
                         display_name = user_info.get("name", user_id) if user_info else user_id
                         
                         if success:
-                            st.success(f"✅ Attendance Marked: **{display_name}** ({user_id})")
+                            st.success(f"Attendance Marked: **{display_name}** ({user_id})")
                         else:
-                            st.info(f"ℹ️ **{display_name}** already marked recently.")
+                            st.info(f"**{display_name}** already marked recently.")
                     else:
                         st.error("Face not recognized.")
         except Exception as e:
