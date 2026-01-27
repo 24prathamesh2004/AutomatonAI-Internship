@@ -1,0 +1,23 @@
+# Core runtime
+python-dotenv>=1.0.0
+# NumPy 2.x breaks insightface/onnxruntime (.bits removed from dtypes) — keep on 1.x
+numpy>=1.24.0,<2.0
+
+# MongoDB (pymongo[srv] needs dnspython 2.x; certifi for TLS/SSL to Atlas)
+# If you get SSL handshake errors on Windows, try: pip install "pymongo[ocsp,srv]"
+#pymongo[srv]>=4.5.0
+pymongo[srv,tls]
+dnspython>=2.2.0
+certifi>=2023.0.0
+
+# ML / face: install onnxruntime before insightface (insightface depends on it)
+onnxruntime>=1.15.0,<1.19.0
+opencv-python-headless
+#opencv-python>=4.8.0
+ultralytics>=8.0.0
+insightface>=0.7.3
+
+# Streamlit
+streamlit>=1.28.0,<2.0
+streamlit-webrtc>=0.44.0
+av>=10.0.0
