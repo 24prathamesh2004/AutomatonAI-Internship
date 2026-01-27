@@ -1,7 +1,4 @@
-"""
-Face detection (YOLOv8-face) and recognition (InsightFace ArcFace buffalo_l).
-Modularized from the detect_recog notebook; used by Enrollment and Live Attendance.
-"""
+
 import os
 from typing import Any, Optional
 
@@ -52,11 +49,6 @@ def get_arcface_model():
 
 
 def get_embedding(face_image: np.ndarray, arcface_model: Optional[Any] = None) -> Optional[np.ndarray]:
-    """
-    Compute 512-d normalized ArcFace embedding for a single face image.
-    face_image: RGB array, typically 112x112 (will be resized to 112x112 if needed).
-    Returns shape (512,) float32 or None on failure.
-    """
     if arcface_model is None:
         arcface_model = get_arcface_model()
     if not isinstance(face_image, np.ndarray):
@@ -84,11 +76,6 @@ def recognize_face(
     db_labels: list[str],
     threshold: float = 0.38,
 ) -> tuple[str, float]:
-    """
-    Match query embedding to DB using cosine similarity.
-    db_emb: (n, 512) array; db_labels: list of user_id of length n.
-    Returns (user_id or "Unknown", score).
-    """
     if query_emb is None or db_emb is None or len(db_emb) == 0:
         return "Unknown", 0.0
     query_emb = np.asarray(query_emb, dtype=np.float32).flatten()
@@ -112,10 +99,6 @@ def process_frame(
     name_map: dict[str, str],
     threshold: float = 0.38,
 ) -> tuple[np.ndarray, list[tuple[str, float]]]:
-    """
-    Run detection + recognition on one BGR frame. Draw bboxes and labels.
-    Returns (annotated BGR image, list of (user_id, score) for each detected face).
-    """
     image_rgb = cv2.cvtColor(bgr_image, cv2.COLOR_BGR2RGB)
     image_out = bgr_image.copy()
     results = detector(image_rgb, verbose=False)
@@ -147,10 +130,6 @@ def process_frame(
 
 
 def extract_largest_face(image_bgr: np.ndarray, detector: Any) -> Optional[np.ndarray]:
-    """
-    Detect faces with YOLO; return largest face crop as RGB 112x112, or None.
-    Used by Enrollment when exactly one face (or largest) is required.
-    """
     image_rgb = cv2.cvtColor(image_bgr, cv2.COLOR_BGR2RGB)
     results = detector(image_rgb, verbose=False)
     if not results or len(results) == 0 or results[0].boxes is None:
